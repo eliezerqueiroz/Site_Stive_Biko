@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pr-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <title>Museu virtual da Memória e História do Bairro Garcia</title>
 </head>
 <body>
-    
-    <div id="site-container">
 
+    <div id="site-container">
         <header>
             <h1 class="logo" id="hidden-logo">
                 Raiz da Memória
             </h1>
-
+    
             <img onclick="openMenu()" src="/assets/cardapio.svg" alt="botão menu">
-
+    
         </header>
-        
-        <div class="sidebar" id="mySidenav">
+
+      <div class="sidebar" id="mySidenav">
             <span class="logo"> Raiz da Memória </span>
             <nav class="navbar">
                 <a href="#" onclick="closeMenu()" class="closebtn">X</a>
@@ -38,13 +37,31 @@
             </nav>
         </div>
 
- 
-        <div class="cover">
+        <div class="main-container">
+
+            <img src="/assets/memoriaviva_cover.jpeg" alt="memoriaviva">
             
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/UyxMK-Kj4YM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-            
+            <section class="sub-page-buttons">
+                <a href="vozesgarcia.html">
+                    <div class="vozes">
+                        <h1>Vozes da Fazenda Garcia</h1>
+                    </div>
+                </a>
+               
+                <a href="locaismemoria.html">
+                <div class="locais">
+                   
+                    <h1>Locais de Memória</h1>
+                   
+                </div>
+                </a>
+            </section>
+
+
         </div>
+
+        
+        
 
         <div class="social-bar">
             <a href="#"><img src="/assets/049-facebook.svg" alt="facebook"></a>
