@@ -6,6 +6,7 @@
 
 body{
     background-color: #00038C;
+    display: flex;
 
 }
 
@@ -18,10 +19,15 @@ body{
     
 }
 
+.main-container{
+    display: flex;
+    
+}
+
 header{
-    width: 100vw;
+    width: 100%;
     text-align: center;
-    padding: 60px 0;
+    padding: 50px 0px;
     background-color: #F2B807;
 
     display: flex;
@@ -29,12 +35,25 @@ header{
 
 }
 
+header h1{
+    /* margin: 30px 30px; */
+    /* padding: 0 8px; */
+    /* box-sizing: border-box; */
+    /* width: 100%; */
+    /* align-self: flex-start; */
+    font-weight: 700;
+    font-family: 'Salsa', cursive;
+    font-size: 60px;
+    color: #000000;
+
+}
+
 header img{
     position: absolute;
     right: 0;
     top: 0;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     padding: 15px;
     border-radius: 0 0 0 50% ;
     background-color: #F23207;
@@ -59,18 +78,19 @@ header img:hover{
 .sidebar{
     /* border: 1px solid red; */
     /* margin-left: 30px; */
-    height: 100%;
+    /* padding:0 20px ; */
     width: 0;
-    position: absolute;
+    height: 100%;
+    position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    background-color: #F2B807;
+    background-color: #f2b707;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: width 0.4s;
+    /* transition: width 0.4s; */
     /* border-radius: 0 150px 0px 0; */
 
 }
@@ -78,17 +98,19 @@ header img:hover{
 .sidebar span{
     margin: 30px 30px;
     /* padding: 0 8px; */
+    /* box-sizing: border-box; */
     width: 200px;
-    align-self: flex-start;
+    /* align-self: flex-start; */
     font-weight: 700;
     font-family: 'Salsa', cursive;
-    font-size: 60px;
+    /* font-size: 40px; */
     color: #000000;
 
 }
 
 .navbar {
-    /* margin:40px 0 ; */
+    /* width: 300px; */
+    /* margin: 0 40px; */
     display: flex;
     flex-direction: column;
 }
@@ -99,7 +121,7 @@ header img:hover{
     font-size: 26px;
     font-family: 'Ubuntu', sans-serif;
     color:  #000000;
-    margin: 4px 0;
+    /* margin: 4px 8px; */
     padding: 2px;
     border-radius: 4px;
 }
@@ -123,31 +145,26 @@ header img:hover{
     
 }
 
-.cover{
-    /* width: 100vw; */
-    /* height: 100vh; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    padding: 130px 30px;
+article .cover{
+    width: 100% !important;
 }
 
-.cover iframe{
-    width: 400px;
-    height: 225px;
-    border-radius: 12px;
-    background-color: #f2b707ea;
+
+iframe{
+    width: 100vw;
+    margin-top:100px ;
+    /* height: 225px; */
+    /* border-radius: 12px; */
+    /* background-color: #f2b707ea; */
 }
 
 .social-bar{
-    /* position: absolute;
-    bottom: 5%;
-    left: auto; */
+    /* position: absolute; */
+    /* bottom: 10px; */
+    width: 100%;    
     display: flex;
-    align-items: flex-end;
     justify-content: space-evenly;
-    width: 50vw;
+    /* width: 100%; */
     margin: 20px 0;
 
 }
@@ -166,4 +183,71 @@ header img:hover{
     filter: invert();
 }
 
+
+@media (min-width: 1000px){
+    iframe{
+        /* width: 100%; */
+        padding: 0 40px;
+        width: 1138px;
+        height: 590px;
+    }
+
+    .sidebar{
+        margin-top: 200px;
+        width: 300px !important;
+        position: relative !important;
+        /* background-color: #f2b70700; */
+        height: auto;
+        
+    }
+
+    .navbar a{
+        /* color: #F2B807 !important; */
+    }
+
+    .navbar a:hover{
+        /* background-color: #F2B807; */
+        /* color: #00058e !important; */
+        
+    }
+    
+    .sidebar span{
+        display: none ;
+    }
+
+    .sidebar .closebtn{
+        visibility: hidden;
+    }
+    header img{
+        visibility: hidden;
+    }
+
+    header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 260px;
+        padding: 60px 20px;
+        /* background-color: #f2b70700; */
+        justify-content: left;
+        z-index: -1;
+        
+    }
+
+    header h1{
+        visibility: visible !important;
+        /* color: #F2B807 !important; */
+        width:200px;
+        font-size: 60px !important;
+    }
+
+    .social-bar{
+        /* border: 1px red solid; */
+        /* left: 0; */
+        /* bottom: 100px; */
+        /* z-index: 1; */
+        /* width: 290px; */
+    }
+    
+}
 

@@ -8,18 +8,19 @@
 }
 
 .main-container img{
-    width: 100vw;
+    width: 100%;
 }
 
-.sub-page-buttons{
+.cover-container{
     /* margin-top: -4px; */
-    /* width: 100%; */
+    /* width: 100vw; */
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
 
 }
 
-.sub-page-buttons div{
+.cover-container .subpage-btn{
     height: 60px;
     padding: 0 12px;
     background-color: #F23207;
@@ -30,17 +31,17 @@
     align-items: center;
 }
 
-section a{
-    text-decoration: none;
+article a{
+text-decoration: none;
 }
 
-section h1{
+article h1{
     font-weight: 700;
     font-size: 26px;
     font-family: 'Ubuntu', sans-serif;
     transition: color 0.5s;
 }
 
-section div:hover{
+.cover-container .subpage-btn:hover{
     color: #ffffff;
 }
