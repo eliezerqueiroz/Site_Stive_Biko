@@ -7,14 +7,12 @@
     
 }
 
+
 .main-container img{
     width: 100%;
 }
 
 .cover-container{
-    /* margin-top: -4px; */
-    /* width: 100vw; */
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
 
@@ -25,7 +23,8 @@
     padding: 0 12px;
     background-color: #F23207;
     color: #000000;
-    margin:4px 0 ;
+    /* border-bottom: 2px #f2b707ea solid; */
+    margin-top: 8px;
     display: flex;
     justify-content: center;
     align-items: center;

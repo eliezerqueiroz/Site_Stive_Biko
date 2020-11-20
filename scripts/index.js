@@ -1,5 +1,5 @@
 function openMenu() {
-    document.getElementById("mySidenav").style.width = "300px";
+    document.getElementById("mySidenav").style.width = "100%";
     // document.getElementById("mySidenav").style.visibility = "visible";
     document.getElementById("hidden-logo").style.visibility = "hidden";
   }
