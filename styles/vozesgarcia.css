@@ -1,17 +1,18 @@
 
 .vozes-container{
+    /* width: 100vw; */
     /* box-sizing: border-box; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .sub-nav{
-    max-width: 100%;
+    /* max-width: 100vw; */
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #F23207;
     color: #000000;
-    
+    overflow-x: hidden;
     /* padding: 40px 0; */
 }
 
@@ -33,10 +34,10 @@
 }
 
 .galeria-vozes{
-    max-width: 100vw;
+    /* width: 100vw; */
     /* padding: 0 20px ; */
     /* box-sizing: border-box; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     text-align: center;
 }
 
@@ -45,19 +46,16 @@
     color: #ffffff;
 }
 .video-vozes{
+    /* overflow-x: hidden; */
     max-width: 100%;
     margin: 40px 0;
 }
 
 @media (min-width: 1000px){
-    .vozes-container{
-        overflow-x: hidden;
-    }
-    .video-vozes{
-        /* width: 100%; */
-        /* padding: 0 49px; */
-        width: 1218px ;
-        height: 590px;
 
+    .vozes-container{
+        width: 100vw;
+        max-width: 1218px;
     }
+
 }
