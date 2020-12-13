@@ -34,7 +34,7 @@
 }
 
 .subpage-btn{
-    /* width: 70%; */
+    width: 100%;
 }
 
 .subpage-btn h1{
@@ -53,8 +53,8 @@
 @media (min-width: 1000px){
 
     .locais-container{
-        /* width: 100%; */
-        max-width: 1218px;
+        /* width: auto; */
+        width: 1236px;
     }
 
 }

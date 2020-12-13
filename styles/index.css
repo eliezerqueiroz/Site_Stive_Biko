@@ -29,18 +29,12 @@ header{
     text-align: center;
     padding: 50px 0px;
     background-color: #F2B807;
-
     display: flex;
     justify-content: center;
 
 }
 
 header h1{
-    /* margin: 30px 30px; */
-    /* padding: 0 8px; */
-    /* box-sizing: border-box; */
-    /* width: 100%; */
-    /* align-self: flex-start; */
     font-weight: 700;
     font-family: 'Salsa', cursive;
     font-size: 60px;
@@ -76,9 +70,6 @@ header img:hover{
 
 
 .sidebar{
-    /* border: 1px solid red; */
-    /* margin-left: 30px; */
-    /* padding:0 20px ; */
     width: 0;
     height: 100%;
     position: fixed;
@@ -86,30 +77,22 @@ header img:hover{
     top: 0;
     left: 0;
     overflow-x: hidden;
-    background-color: #f2b707ea;
+    background-color: #f2b707ef;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* transition: width 0.4s; */
-    /* border-radius: 0 150px 0px 0; */
-
 }
 
 .sidebar span{
     margin: 30px 30px;
-    /* padding: 0 8px; */
-    /* box-sizing: border-box; */
     width: 200px;
-    /* align-self: flex-start; */
     font-weight: 700;
     font-family: 'Salsa', cursive;
-    /* font-size: 40px; */
     color: #000000;
 
 }
 
 .navbar {
-    /* width: 300px; */
     margin: 40px 0;
     display: flex;
     flex-direction: column;
@@ -127,12 +110,7 @@ header img:hover{
 }
 
 .closebtn{
-    /* position: absolute;
-    top: 190px;
-    left: 240px; */
     text-align: center;
-    /* width: 60px; */
-    /* align-self: center; */
     font-weight: 900;
     font-size: 160px;
     color: #ffffff !important;
@@ -149,20 +127,15 @@ article .cover{
     width: 100%;
 }
 
-
-
 .cover iframe{
     width: 100vw;
     margin-top:100px ;
 }
 
 .social-bar{
-    /* position: absolute; */
-    /* bottom: 10px; */
     width: 100%;    
     display: flex;
     justify-content: space-evenly;
-    /* width: 100%; */
     margin: 20px 0;
 
 }
@@ -172,7 +145,6 @@ article .cover{
 }
 
 .social-bar img{
-    /* margin: 18px 0; */
     transition: filter 0.4s;
 }
 
@@ -184,54 +156,31 @@ article .cover{
 
 @media (min-width: 1000px){
     .cover iframe{
-        /* padding: 0 40px; */
         max-width: 1219px;
         height: 590px;
     }
 
     .sidebar{
-        margin-top: 200px;
         width: 300px !important;
-        position: relative !important;
+        position: fixed !important;
         background-color: #f2b707;
-        height: auto;
-        
     }
 
     .navbar {
         align-items: unset;
     }
-    
-    .sidebar span{
-        display: none ;
-    }
 
     .sidebar .closebtn{
         visibility: hidden;
     }
-    header img{
+    header{
+        display: none;
         visibility: hidden;
     }
 
-    header{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 260px;
-        padding: 60px 20px;
-        /* background-color: #f2b70700; */
-        justify-content: left;
-        z-index: -1;
-        
+    article{
+        margin-left: 300px;
     }
-
-    header h1{
-        visibility: visible !important;
-        /* color: #F2B807 !important; */
-        width:200px;
-        font-size: 60px !important;
-    }
-
     
 }
 

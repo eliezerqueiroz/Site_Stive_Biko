@@ -1,0 +1,9 @@
+.infografico-container{
+    width: 100vw;
+}
+
+@media (min-width: 1000px){
+    .infografico-container{
+        width: 1219px;
+    }
+}
