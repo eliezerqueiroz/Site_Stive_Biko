@@ -1,33 +1,162 @@
 <!DOCTYPE html>
 <html lang="pr-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/entrevista.css">
+    <link rel="stylesheet" href="/styles/slid-layout.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
     <title>Museu virtual da Memória e História do Bairro Garcia</title>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* body {font-family: Verdana, sans-serif; margin:0} */
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            /* width: 100%; */
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (min-width: 1000px) {
+            .slideshow-container {
+                max-width: 1300px;
+                /* max-width: 1000px; */
+                /* position: relative; */
+                /* margin: auto; */
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-   
+
 
     <div id="site-container">
 
-        <header>
+        <header id="slid-layout-header">
 
             <h1 class="logo" id="hidden-logo">
                 Raiz da Memória
             </h1>
-    
-            <img onclick="openMenu()" src="/assets/cardapio.svg" alt="botão menu">
-    
+
+            <img id="slid-layout-btn" onclick="openMenu()" src="/assets/cardapio.svg" alt="botão menu">
+
         </header>
 
-      
+
 
         <div class="main-container">
 
@@ -42,45 +171,85 @@
                     <a href="memoriapreta.html">Memória Preta</a>
                     <a href="memoriaprojeto.html">Memória do Projeto </a>
                     <a href="contatos.html">Contatos</a>
-                    
                 </nav>
             </div>
 
-           
+
 
             <article class="cover-container">
 
                 <div class="sub-nav">
 
-                    <a class="return-btn" href="memoriaprojeto.html">    
-                       <img src="/assets/arrow-back.svg" alt="">
+                    <a class="return-btn" href="memoriaprojeto.html">
+                        <img src="/assets/arrow-back.svg" alt="">
                     </a>
-                    
-                    <h1>Equipe desafio história 2018</h1>         
-    
+
+                    <h1>Equipe desafio de história 2018</h1>
+
                 </div>
 
-                <img src="/assets/memoriaprojeto_cover.jpeg" alt="memoriaviva">
+                <div class="slideshow-container">
 
-                
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 5</div>
+                        <img src="/assets/MP-equipes/equipe1.png" style="width:100%">
+                        
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 5</div>
+                        <img src="/assets/MP-equipes/equipe2.png" style="width:100%">
+                        
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 5</div>
+                        <img src="/assets/MP-equipes/equipe3.png" style="width:100%">
+                       
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <img src="/assets/MP-equipes/equipe4.png" style="width:100%">
+                        
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <img src="/assets/MP-equipes/equipe5.jpg" style="width:100%">
+                        
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+
+
                 <p class="paragraf">
-                    Este Museu Virtual é resultado do trabalho da equipe de
-                    Sensação e reflexão que cada visita causou nos membros da equipe.
-
+                    Este Museu Virtual é resultado do trabalho da equipe de Sensação e reflexão que cada visita causou nos membros da equipe.
                     <br>
                     <br>
-                    Componente 1
+                    Componente 1    
                     <br>
                     Componente 2
                     <br>
                     Componente 3
                     <br>
                     Componente 4
-                    <br>
-
                 </p>
 
-                
+
+
 
                 <div class="social-bar">
                     <a href="#"><img src="/assets/049-facebook.svg" alt="facebook"></a>
@@ -88,13 +257,13 @@
                     <a href="#"><img src="/assets/002-linkedin.svg" alt="linkedin"></a>
                     <a href="#"><img src="/assets/038-youtube.svg" alt="youtube"></a>
                     <a href="#"><img src="/assets/027-twitter.svg" alt="twitter"></a>
-                    
+
                 </div>
 
             </article>
 
 
-            
+
 
         </div>
 
@@ -105,5 +274,37 @@
     <script src="/scripts/index.js">
 
     </script>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
 </body>
+
 </html>
