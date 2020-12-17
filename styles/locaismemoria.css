@@ -17,11 +17,10 @@
     
 }
 
-.return-btn img{
+.return-btn {
     padding-left: 10px;
-     width: 20%;
-     transition: filter 0.4s;
-    /* align-self: flex-start; */
+    width: 35px;
+    transition: filter 0.4s;
 }
 
 .return-btn img:hover{
@@ -53,7 +52,6 @@
 @media (min-width: 1000px){
 
     .locais-container{
-        /* width: auto; */
         width: 1236px;
     }
 

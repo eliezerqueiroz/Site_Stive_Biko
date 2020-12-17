@@ -1,13 +1,9 @@
 #site-container{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
-
-
 .main-container img{
     width: 100%;
 }
@@ -15,23 +11,17 @@
 .cover-container{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-
 }
-
 .cover-container .subpage-btn{
     height: 60px;
     padding: 0 12px;
     background-color: #F23207;
     color: #000000;
-    /* border-bottom: 2px #f2b707ea solid; */
     margin-top: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 article a{
 text-decoration: none;
 }
@@ -41,28 +31,24 @@ article p{
     font-size: 20px;
     font-family: 'Ubuntu', sans-serif;
     text-align: justify;
-    /* width: 100%; */
     max-width: 1000px;
     justify-self: center;
     align-self: center;
     margin: 20px 40px;
-
 }
-
 article h1{
     font-weight: 700;
     font-size: 26px;
     font-family: 'Ubuntu', sans-serif;
     transition: color 0.5s;
 }
-
 .cover-container .subpage-btn:hover{
     color: #ffffff;
 }
 
-/* @media (min-width: 1000px){
-    article p{
-        padding: 0 40px;
-        max-width: 900px;
-        height: 590px;
-    } */
+
+.return-btn {
+    padding-left: 10px;
+    width: 35px;
+    transition: filter 0.4s;
+}

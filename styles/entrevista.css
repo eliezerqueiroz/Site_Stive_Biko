@@ -10,11 +10,10 @@
     /* padding: 40px 0; */
 }
 
-.return-btn img{
+.return-btn {
     padding-left: 10px;
-     width: 20%;
-     transition: filter 0.4s;
-    /* align-self: flex-start; */
+    width: 35px;
+    transition: filter 0.4s;
 }
 
 .return-btn img:hover{

@@ -23,12 +23,7 @@
     /* padding: 40px 0; */
 }
 
-.return-btn img{
-    padding-left: 10px;
-     width: 20%;
-     transition: filter 0.4s;
-    /* align-self: flex-start; */
-}
+
 
 .return-btn img:hover{
     filter: invert();
