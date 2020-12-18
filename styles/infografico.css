@@ -18,9 +18,7 @@
     transition: filter 0.4s;
 }
 
-.return-btn a h1:hover{
-    filter: invert();
-}
+
 
 .sub-nav h1{
     font-size: 26px;
