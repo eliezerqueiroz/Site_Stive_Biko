@@ -1,8 +1,15 @@
+.subpage-btn .infografico{
+    font-size: 24px;
+}
 
 @media (min-width: 1000px){
     .cover-container{
         width: 1234px;
     }
+    .subpage-btn .infografico{
+        font-size: 26px;
+    }
+    
     
 }
 

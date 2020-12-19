@@ -20,6 +20,7 @@ body{
 }
 
 #site-container{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,12 +29,13 @@ body{
 }
 
 .main-container{
+    /* width: 100vw; */
     display: flex;
     
 }
 
 header{
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
     padding: 50px 0px;
     background-color: #F2B807;
@@ -93,7 +95,7 @@ header img:hover{
 
 .sidebar span{
     margin: 30px 30px;
-    width: 200px;
+    width: 250px;
     font-weight: 700;
     font-family: 'Salsa', cursive;
     color: #000000;
@@ -132,12 +134,12 @@ header img:hover{
 }
 
 article .cover{
-    width: 100%;
+    /* width: 100vw; */
 }
 
 .cover iframe{
     width: 100vw;
-    margin-top:100px ;
+    margin-top:20px ;
 }
 
 .social-bar{
@@ -160,6 +162,7 @@ article .cover{
 .social-bar img:hover {
     filter: invert();
 }
+
 
 
 @media (min-width: 1000px){
