@@ -34,6 +34,10 @@
     text-align: center;
 }
 
+.galeria-vozes p{
+    margin: 15px 20px;
+}
+
 .videobox{
 
     /* width: 560px; */
@@ -44,11 +48,12 @@
 
 .videobox iframe {
     width: 350px;
+    margin-top: 10px;
 }
 
 .videobox h1{
+    margin-top: 30px;
     font-size: 26px;
-    margin-top: 80px;
     color: #ffffff;
 }
 
