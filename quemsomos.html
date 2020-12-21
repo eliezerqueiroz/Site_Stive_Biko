@@ -1,38 +1,167 @@
 <!DOCTYPE html>
 <html lang="pr-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/main.css">
-    <!-- <link rel="stylesheet" href="/styles/entrevista.css"> -->
+    <link rel="stylesheet" href="/styles/slid-layout.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
     <title>Raiz da Memória: Museu virtual da Memória e História do Bairro Garcia (MMHG)</title>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* body {font-family: Verdana, sans-serif; margin:0} */
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            /* width: 100%; */
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (min-width: 1000px) {
+            .slideshow-container {
+                max-width: 1300px;
+                /* max-width: 1000px; */
+                /* position: relative; */
+                /* margin: auto; */
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-   
+
 
     <div id="site-container">
 
-        <header>
+        <header id="slid-layout-header">
 
             <h1 class="logo" id="hidden-logo">
                 Raiz da Memória: Museu virtual da Memória e História do Bairro Garcia (MMHG)
             </h1>
-    
-            <img onclick="openMenu()" src="/assets/cardapio.svg" alt="botão menu">
-    
+
+            <img id="slid-layout-btn" onclick="openMenu()" src="/assets/cardapio.svg" alt="botão menu">
+
         </header>
 
-      
+
 
         <div class="main-container">
 
             <div class="sidebar" id="mySidenav">
-                <span class="logo"> Raiz da Memória: Museu virtual da Memória e História do Bairro Garcia (MMHG)</span>
+                <span class="logo"> Raiz da Memória: Museu virtual da Memória e História do Bairro Garcia (MMHG) </span>
                 <nav class="navbar">
                     <a href="#" onclick="closeMenu()" class="closebtn">X</a>
                     <a href="index.html">Página Inicial</a>
@@ -40,23 +169,126 @@
                     <a href="memoriaviva.html">Memória Viva</a>
                     <a href="memoriahistorica.html">Memória História</a>  <!-- História ou Histórica?  -->
                     <a href="memoriapreta.html">Memória Preta</a>
-                    <a href="memoriaprojeto.html">Memória Projeto </a>
+                    <a href="memoriaprojeto.html">Memória Projeto</a>
                     <a href="contatos.html">Contatos/ Colabore</a>
                     <a href="fichatecnica.html"> Ficha técnica</a>
                 </nav>
             </div>
 
-           
 
-            <article class="cover-container" >
-                
 
-                    <h1 style="text-align: center; color: white; margin: 18px 0; font-size: 24px;">
-                       Quem Somos
-                    </h1>
+            <article class="cover-container">
 
-                    <p>
-                        O Portal Raiz da Memória : Museu virtual da Memória e História do Bairro Garcia  é Fruto do Desafio de História do programa Oguntec, do Instituto Cultural Steve Biko.
+                <div class="sub-nav">
+
+                    <a class="return-btn" href="memoriaprojeto.html">
+                        <h1>voltar</h1>
+                    </a>
+
+                    <h1>Desafio de História</h1>
+
+                </div>
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 13</div>
+                        <img src="/assets/quem-somos/equipe2.png" style="width:100%">
+                      
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 13</div>
+                        <img src="/assets/quem-somos/julhodaspretas2.png" style="width:100%">
+                        
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 13</div>
+                        <img src="/assets/quem-somos/julhodaspretas4.png" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 13</div>
+                        <img src="/assets/quem-somos/quemsomos1.png" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 13</div>
+                        <img src="/assets/quem-somos/quemsomo10.jpg" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 13</div>
+                        <img src="/assets/quem-somos/quemsomo11.jpg" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 13</div>
+                        <img src="/assets/quem-somos/quemsomos12.png" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">8 / 13</div>
+                        <img src="/assets/quem-somos/quemsomo13.png" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">9 / 13</div>
+                        <img src="/assets/quem-somos/quemsomo2.jpg" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">10 / 13</div>
+                        <img src="/assets/quem-somos/quemsomo3.jpg" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">11 / 13</div>
+                        <img src="/assets/quem-somos/quemsomo4.png" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">12 / 13</div>
+                        <img src="/assets/quem-somos/quemsomo5.png" style="width:100%">
+                        
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">13 / 13</div>
+                        <img src="/assets/quem-somos/quemsomo6.jpg" style="width:100%">
+                        
+                    </div>
+                    
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <span class="dot" onclick="currentSlide(10)"></span>
+                    <span class="dot" onclick="currentSlide(11)"></span>
+                    <span class="dot" onclick="currentSlide(12)"></span>
+                    <span class="dot" onclick="currentSlide(13)"></span>
+                </div>
+
+                <h1 style="text-align: center; color: white; margin: 18px 0; font-size: 24px;">
+                    Quem Somos
+                 </h1>
+
+
+                <p class="paragraf">
+                    O Portal Raiz da Memória : Museu virtual da Memória e História do Bairro Garcia  é Fruto do Desafio de História do programa Oguntec, do Instituto Cultural Steve Biko.
                         A Biko,  foi fundada  em 31 de julho de 1992, por iniciativa de professores e estudantes negros e negras que - de forma pioneira - criaram o primeiro curso Pré-Vestibular voltado para negros no Brasil. Em muitas reuniões nos jardins da Faculdade de Economia da Universidade Federal da Bahia, no centro de Salvador e embasados nas lutas antirracistas ao redor do mundo, viu-se a urgente necessidade de reunir a militância negra em nível nacional ao redor da Educação. O Instituto surge, então, buscando a inserção dos negros no espaço acadêmico como estratégia para sua ascensão social e o combate à discriminação racial. Trecho retirado do site da instituição. ( STEVE BIKO.ORG 2020)
                                       
                     <br><br>
@@ -77,8 +309,9 @@
 
                     <br><br>
                     PLANALTO. Presidência da República. Casa Civil. LEI No 10.639, DE 9 DE JANEIRO DE 2003. Disponível em: http://www.planalto.gov.br/ccivil_03/leis/2003/l10.639.htm. Acesso em 15 de novembro de 2020.
-
                 </p>
+
+
 
                 <a href="memoriaviva.html" 
                 style="text-decoration: none; color: white; font-size: 20px; text-align: center;">
@@ -97,19 +330,20 @@
                 Memória Projeto
                 </a>
 
+
                 <div class="social-bar">
                     <a href="https://www.facebook.com/icstevebiko/"><img src="/assets/049-facebook.svg" alt="facebook"></a>
                     <a href="https://instagram.com/aquilombamento.oguntec?igshid=1d32sgl8z5zsv"><img src="/assets/060-instagram.svg" alt="instagram"></a>
                     <a href="#"><img src="/assets/002-linkedin.svg" alt="linkedin"></a>
                     <a href="#"><img src="/assets/038-youtube.svg" alt="youtube"></a>
                     <a href="#"><img src="/assets/027-twitter.svg" alt="twitter"></a>
-                    
+
                 </div>
 
             </article>
 
 
-            
+
 
         </div>
 
@@ -120,5 +354,37 @@
     <script src="/scripts/index.js">
 
     </script>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
 </body>
+
 </html>
